@@ -10,3 +10,7 @@ function getUsers() {
 }
 
   fetch('users.json').then(response => response.json()).then(data => console.log(data));
+
+  const result = data.filter(money => money.money > 200);
+
+  console.log(result);
