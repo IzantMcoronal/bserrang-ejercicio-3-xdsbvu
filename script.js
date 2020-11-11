@@ -9,7 +9,7 @@ buttonShowList.addEventListener("click", getUsers);
 function getUsers() {
 
     // Con fetch obtenemos la lista de usuarios que estan dentro del archivo users.jason y ademas lo meto dentro del array tenmporal data.
-    fetch('users.json').then(response => response.json()).then( data => {console.log(data); // console log para mostrar el array completo
+    fetch('users.json').then(response => response.json()).then( data => {console.log(data); // console log para mostrar el array completo 
     
     //Creo una variable con el nombre result donde voy a meter el resultado obtenido de filtrar el array data. 
     const result = data.filter(user => user.money > 500);
