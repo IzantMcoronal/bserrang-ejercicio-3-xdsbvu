@@ -5,22 +5,30 @@
 let buttonShowList = document.getElementById("showList");
 buttonShowList.addEventListener("click", getUsers);
 
+// Funcion que obtiene los usuarios
 function getUsers() {
 
-}  
+    // Con fetch obtenemos la lista de usuarios que estan dentro del archivo users.jason y ademas lo meto dentro del array tenmporal data.
+    fetch('users.json').then(response => response.json()).then( data => {console.log(data); // console log para mostrar el array completo
+    
+    //Creo una variable con el nombre result donde voy a meter el resultado obtenido de filtrar el array data. 
+    const result = data.filter(user => user.money > 500);
+    console.log(result); // console log para mostrar los usuarios filtrados. 
 
-  fetch('users.json').then(response => response.json()).then( data => {console.log(data);
-  
-  const result = data.filter(money => money.money > 500);
-  console.log(result);
+    //Realizo un forEach en result y le digo que solo me muestre el nomrbe de los usuarios
+    result.forEach(user => console.log(user.name))
 
-  result.forEach(name => console.log(name))
+    // Solo muestra los 3 nombres en el console log sin los array
+    //fetch('users.json').then(response => response.json()).then(data => { const result = data.filter(user => user.money > 500);
+    // result.forEach(user => console.log(user.name))}); 
   
   }); 
 
-// Solo una Linea
-//fetch('users.json').then(response => response.json()).then(data => { const result = data.filter(money => money.money > 500);
-//  result.forEach(name => console.log(name))}); 
+}  
+
+
+
+
 
 
 
