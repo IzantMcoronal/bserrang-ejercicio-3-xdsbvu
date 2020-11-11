@@ -16,7 +16,7 @@ function getUsers() {
 
   data.forEach(name => console.log(name))
   
-  });
+  }); 
 
 
 
