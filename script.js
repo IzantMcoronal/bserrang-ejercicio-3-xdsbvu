@@ -8,7 +8,7 @@ buttonShowList.addEventListener("click", getUsers);
 // Funcion que obtiene los usuarios
 function getUsers() {
 
-    // Con fetch obtenemos la lista de usuarios que estan dentro del archivo users.jason y ademas lo meto dentro del array tenmporal data.
+    // Con fetch obtenemos la lista de usuarios que estan dentro del archivo users.json y ademas lo meto dentro del array tenmporal data.
     fetch('users.json').then(response => response.json()).then( data => {console.log(data); // console log para mostrar el array completo 
     
     //Creo una variable con el nombre result donde voy a meter el resultado obtenido de filtrar el array data. 
